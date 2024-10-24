@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercizio 27</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    
+    <h1> Acquisto prodotto </h1>
+    <div class="w-50 bg-secondary-subtle p-3 mx-auto">
+        <form action="management.php" method="post">
+            <label for="name"> Nome oggetto </label>
+            <input type="text" name="name" id="name" class="form-control" required> <br>
+            <label for="price"> Costo oggetto </label>
+            <input type="text" name="price" id="price" class="form-control" required> <br>
+            <label for="quantity"> Quantità </label>
+            <select name="quantity" id="quantity" required>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+            </select> <br>
+            <input type="checkbox" name="second_hand" id="sec_hand" value="">
+            <label for="sec_hand"> Di seconda mano </label> <br>
+            <input type="radio" name="pay_method" id="cash" required value="Contanti"> <label for="chash"> Contanti </label> <br>
+            <input type="radio" name="pay_method" id="card" required value="Carta di credito o debito"> <label for="chash"> Carta di debito o credito </label> <br>
+            <input type="radio" name="pay_method" id="coupon" required value="coupon/buono sconto digitale"> <label for="chash"> Buono digitale </label> <br>
+            <button type="submit" class="btn btn-success"> INVIA </button>
+            <button type="reset" class="btn btn-danger"> ANNULLA </button>
+        </form>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
